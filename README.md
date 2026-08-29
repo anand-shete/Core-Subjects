@@ -10,6 +10,11 @@ Notes of Database Management System, Operating Systems, Computer Networking and 
 [Shrayansh HLD Course](https://www.youtube.com/playlist?list=PL6W8uoQQ2c63W58rpNFDwdrBnq5G3EfT7)  
 [Shrayansh LLD Course](https://www.youtube.com/playlist?list=PL6W8uoQQ2c61X_9e6Net0WdYZidm7zooW)
 
+## Excalidraw Diagrams included
+<img width="671" height="921" alt="Screenshot_20260830_002301" src="https://github.com/user-attachments/assets/3794c6d9-70ef-4dc2-8032-d37cd9e4225c" />
+<img width="1455" height="981" alt="Screenshot_20260830_002329" src="https://github.com/user-attachments/assets/f403bdeb-86cb-4c06-abcf-b59c5f41fbbe" />
+
+
 Below is the detailed file structure topicwise of entire repository
 
 ## Networking
