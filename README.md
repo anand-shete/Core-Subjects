@@ -10,8 +10,7 @@ Notes of Database Management System, Operating Systems, Computer Networking and 
 [Shrayansh HLD Course](https://www.youtube.com/playlist?list=PL6W8uoQQ2c63W58rpNFDwdrBnq5G3EfT7)  
 [Shrayansh LLD Course](https://www.youtube.com/playlist?list=PL6W8uoQQ2c61X_9e6Net0WdYZidm7zooW)
 
-
-# Folder Structure
+Below is the Folder Structure of entire repository.
 
 ## Networking
 
@@ -37,6 +36,9 @@ Notes of Database Management System, Operating Systems, Computer Networking and 
    - Classful vs. Classless (CIDR) subnetting
    - Subnet masks
    - Network/host address calculation.
+
+7. [REST API](./networking/7-rest-api.md)
+   - Important REST principles to follow while writing CRUD API
 
 ## Operating Systems
 

@@ -1,6 +1,6 @@
 # SOLID Principles
 
-The SOLID principles are five design rules for writing clean, maintainable, and scalable object-oriented software
+The SOLID principles are five design rules for writing clean, maintainable, and scalable object-oriented code
 
 ## Single Responsibility Principle (SRP)
 

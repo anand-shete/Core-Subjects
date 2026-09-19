@@ -26,9 +26,6 @@ A B+ Tree is an advanced, optimized variant of the B-Tree. It is the foundation 
 - **Superior Range Queries**: Because leaf nodes are linked, operations like `SELECT * FROM table WHERE age > 20 AND age < 50` can be completed incredibly fast by traversing the linked list at the bottom, without going back up the tree.
 - **Better Fan-out**: Because internal nodes do not store large data payloads (only keys and pointers), they can hold more keys per node. This flattens the tree’s height, drastically reducing the number of disk I/O operations required for lookups.
 
-## Summary of Core Differences
-
-
 ## Clustered vs. Non-Clustered Indexes
 
 ## Why Indexing Speeds Up Reads
