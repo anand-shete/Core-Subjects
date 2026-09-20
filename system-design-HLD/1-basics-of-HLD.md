@@ -2,21 +2,17 @@
 
 Fault tolerance is a system's ability to continue operating properly and without interruption despite the failure of hardware components or software bugs.
 
-## Stateful vs. Stateless servers
+## Stateful architecture
 
-### Stateful architecture
+A stateful server remembers client data or **state** from one request to the next. Web server stores session data locally in its own RAM or hard drive.
 
-A stateful server remembers client data (**state**) from one request to the next. In a stateful setup, the web server stores session data locally in its own RAM or hard drive.
-
-To make this work horizontally, enable Sticky Sessions (**Session Affinity**) on your load balancer. The load balancer inspects a cookie or IP address to ensure User A always routes to Server 1.
-
-#### Disadvantages
+For horizontal scaling with stateful architecture, **Sticky sessions** is used, where load balancer attaches a digital sticky note (IP address or browser cookie) which forces a client to connect to same server each time.
 
 - **Poor Load Distribution**: If User A sends massive amounts of traffic, Server 1 gets crushed while Server 2 sits idle.
 - **Harder Scaling**: You cannot easily shut down a server for maintenance or downscale during low-traffic hours without destroying the sessions of active users.
 - **No Fault Tolerance**: If Server 1 crashes, User A's shopping cart and login session vanish instantly.
 
-### Stateless architecture
+## Stateless architecture
 
 Stateless server is a computing model where the server processes each client request entirely independently, without retaining any memory or session information from previous interactions.
 

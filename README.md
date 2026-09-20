@@ -134,8 +134,6 @@ Below is the Folder Structure of entire repository.
 
 26. [JSON Web Tokens (JWT)](./system-design-HLD/26-json-web-token.md)
 
-> I have also added excalidraw notes for system design architectures
-
 ## Low Level System Design (LLD)
 
 1. [Object-Oriented Design](./system-design-LLD/1-object-oriented-design.md)

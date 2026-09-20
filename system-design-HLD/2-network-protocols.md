@@ -14,7 +14,7 @@
 
 6. **Websockets**: State-upgraded protocol. Starts as a standard HTTP handshake but upgrades to a persistent, bi-directional, full-duplex TCP connection.
 
-### P2P Protocols
+### Peer to Peer Protocols (P2P)
 
 1. **WebRTC**: Browser-based, ultra-low latency audio/video streaming. Uses Signaling (via WebSockets/HTTP) to exchange metadata via STUN/TURN servers, then establishes a direct P2P UDP connection.
 
@@ -22,13 +22,13 @@
 
 3. **Gossip Protocols**: Decentralized communication where nodes periodically pass state updates to random neighbors. Used for state synchronization in blockchains (Bitcoin) and distributed databases (Cassandra).
 
-### Pub/Sub Protocols (Publish/Subscribe)
+### Publish/Subscribe Protocols (Pub/Sub)
 
 1. **MQTT** (Message Queuing Telemetry Transport): Ultra-lightweight protocol used by smart home devices and sensors.
 
 2. **AMQP** (Advanced Message Queuing Protocol): Robust, enterprise protocol used by message brokers like RabbitMQ.
 
-### RPC Protocols (Remote Procedure Call)
+### Remote Procedure Call Protocols (RPC)
 
 1. **gRPC**: Developed by Google, it uses HTTP/2 and Protocol Buffers to send binary data at extreme speeds between microservices.
 
