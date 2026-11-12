@@ -20,12 +20,6 @@ The CAP Theorem states that a distributed system can deliver at most two out of 
 - ACID Consistency is about Rules (Don't break my database constraints).
 - CAP Consistency is about Time (Everyone must see the exact same data right now).
 
-## Eventual Consistency
-
-Eventual consistency is a data consistency model used in distributed systems where data updates are not replicated across all nodes instantly. Instead, the system guarantees that if no new updates are made, **all replicas will eventually synchronize and return the exact same value**.
-
-> To achieve consistency across a distributed network, we do not use traditional local locking like Mutexes or Semaphores. Local primitives like mutexes and semaphores only work inside the RAM of a single computer to manage CPU threads. They cannot control threads accross distributed systems.
-
 ## Strong Consistency
 
 Strong consistency ensures that once a write succeeds, every subsequent read across any server will return that new value. It acts like a single global machine.

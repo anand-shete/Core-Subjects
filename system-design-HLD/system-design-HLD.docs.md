@@ -92,3 +92,7 @@ Parallelism in distributed systems is the practice of running multiple tasks at 
 ## Intranet
 
 An intranet is a private, secure computer network used within a single organization to share files, run internal tools, and connect a distributed workforce
+
+## Bitrate
+
+Bitrate is the amount of data processed per second of video. It is usually measured in Mbps (Megabits per second) or Kbps (Kilobits per second). If a video has a high bitrate, it has a lot of data, making it look crisp and clear. If a video has a low bitrate, the data is heavily compressed, resulting in a blurry, blocky, or "pixelated" image.

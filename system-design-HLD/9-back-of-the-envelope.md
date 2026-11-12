@@ -35,17 +35,36 @@
 ## Assumptions
 
 - **Daily Active Users(DAU)**: $25\%$ of total users
-- **Query Per Second(QPS)**: $\frac{Total\ Queries\ in\ a\ day}{86400\ sec}$
-- **Standard Text/ASCII Char**: $1$ Byte per character
-- **Unicode/Non-English Text**: $2$ Bytes per character
-- **Long / Double / IDs**: $8$ Bytes
-- **Average Post**: $250$ characters
-- **Averge Image size**: $300$ KB
+- **Unicode (UTF-8) Text**: $2$ Bytes per character
+- **Long / Double**: $8$ Bytes
+- **UUIDs**: $16$ Bytes
+- **1 Post**: $250$ characters = $250 \times 2$ = $500$ Bytes
+- **1 Image size**: $300$ KB
 - **Video**: $3\ MB$ to $4\ MB$ per minute (standard compressed mobile streaming)
-- **P50**: Half of your users get response in less than $100ms$ during peak hours
-- **P95**: $95\%$ users receive response in under $500ms$ at peak
-- **P99**: $99\%$ users receive response in under $1s$ to $2s$ at peak
+- **Total Seconds in 1 Day**: $100K$ seconds
+
+### Read-Write Ratio
+
+| Application Type               | Examples                            | Read:Write Ratio |
+| ------------------------------ | ----------------------------------- | ---------------- |
+| Social Media, Read-Heavy       | Twitter, Instagram, TikTok, YouTube | 100:1            |
+| Messaging & Communication Apps | WhatsApp, Slack, Discord            | 5:1              |
+| Ride-Sharing & Delivery Apps   | Uber, Ola, Zomato                   | 1:10             |
+
+### API Response Time
+
+| Type | Latency      | Description                                                           |
+| ---- | ------------ | --------------------------------------------------------------------- |
+| P50  | $<100ms$     | Standard. $50\%$ of all requests are faster than $100ms$              |
+| P95  | $<500ms$     | High Performance. $95\%$ users receive response in under $500ms$      |
+| P99  | $1s\ to\ 2s$ | Worst case limit. $99\%$ users receive response in under $1s$ to $2s$ |
+
+## Formulas
+
+- **Query Per Second(QPS)**: $\frac{Total\ Queries\ in\ a\ day}{86400\ sec}$
 - **Peak QPS**: $2\ \times$ Avg. QPS
+- **Ingress** (Incoming bandwidth usage): $\frac{Storage per Day}{86400}$
+- **Egress** (Outgoing bandwidth usage): ${Ingress} \times {\frac{Read}{Write}}$
 
 ## Minimal Findings
 
@@ -57,16 +76,16 @@
 
 ### Additional Notes
 
-- High Read QPS is scales by adding Caching layers (Redis) and Database Read Replicas. Reads are easy to duplicate.
+- High Read QPS scales by adding Caching layers (Redis) and Database Read Replicas. Reads are easy to duplicate.
 
-- High Write QPS is scales by adding Message Queues (Kafka), Database Sharding (partitioning), and choosing write-optimized databases (like NoSQL/LSM-tree). Caching does not help with incoming writes.
+- High Write QPS scales by adding Message Queues (Kafka), Database Sharding (partitioning), and choosing write-optimized databases (like NoSQL/LSM-tree).
 
 ### Estimate FaceBook QPS and Storage Requirements
 
 **Given assumptions**
 
 - Total users = $1\ Billion$
-- Everyday user posts $2$ Images
+- User creates 2 posts each day
 - Everyday $10\%$ of users upload Images
 
 **Estimated Requirements**

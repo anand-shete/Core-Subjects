@@ -1,7 +1,8 @@
 ## Load Balancer
-A load balancer acts as a **reverse proxy server** that intelligently distributes incoming network traffic or computational tasks across multiple backend servers or nodes in a distributed system.
 
-Its primary purpose is to ensure high availability, reliability, and optimal performance by preventing any single server from becoming a bottleneck or a single point of failure
+Load balancer handles distribution of network traffic or computational workloads across multiple servers (nodes). Its primary purpose is to ensure high availability, reliability, and optimal performance by preventing a single server from becoming a bottleneck or a single point of failure.
+
+> Load balancer can also act as a **reverse proxy server** that intelligently distributes incoming network traffic or computational tasks across multiple backend servers or nodes in a distributed system.
 
 ## Types of Load Balancers
 
